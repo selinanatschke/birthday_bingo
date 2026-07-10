@@ -92,7 +92,7 @@ function assignNames(templates, names) {
   return templates.map((template, index) => {
     const person = shuffledNames[index % shuffledNames.length];
     const questionText = getQuestionText(template, person);
-    return questionText.replaceAll("{{name}}", person.name);
+    return questionText.split("{{name}}").join(person.name);
   });
 }
 
@@ -203,7 +203,7 @@ async function init() {
     renderBoard(currentState.fields, currentState.progress);
   } catch (error) {
     const message = error instanceof Error ? error.message : "Unbekannter Fehler";
-    showError(`${message}. Starte die Seite ueber einen lokalen Webserver, nicht direkt per file://.`);
+    showError(`${message}. Lol, sag Selina Bingo ist kaputt.`);
   }
 }
 
