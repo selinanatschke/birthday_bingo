@@ -51,7 +51,7 @@ function normalizePerson(person) {
   }
 
   if (person.gender !== "m" && person.gender !== "w") {
-    throw new Error(`Ungueltiges Geschlecht fuer ${person.name}. Erlaubt sind nur "m" oder "w".`);
+    throw new Error(`Ungültiges Geschlecht für ${person.name}. Erlaubt sind nur "m" oder "w".`);
   }
 
   return {
