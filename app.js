@@ -33,16 +33,66 @@ function getBoardTemplates(questions) {
   return shuffle(questions).slice(0, BOARD_SIZE);
 }
 
+function normalizePerson(person) {
+  if (typeof person === "string") {
+    return {
+      name: person,
+      gender: null,
+    };
+  }
+
+  if (
+    !person ||
+    typeof person !== "object" ||
+    typeof person.name !== "string" ||
+    person.name.trim() === ""
+  ) {
+    throw new Error("Jede Person braucht mindestens einen Namen.");
+  }
+
+  if (person.gender !== "m" && person.gender !== "w") {
+    throw new Error(`Ungueltiges Geschlecht fuer ${person.name}. Erlaubt sind nur "m" oder "w".`);
+  }
+
+  return {
+    name: person.name,
+    gender: person.gender,
+  };
+}
+
+function getQuestionText(question, person) {
+  if (typeof question === "string") {
+    return question;
+  }
+
+  if (
+    !question ||
+    typeof question !== "object" ||
+    typeof question.m !== "string" ||
+    typeof question.w !== "string"
+  ) {
+    throw new Error("Jede Frage muss als Text oder als Objekt mit 'm' und 'w' vorliegen.");
+  }
+
+  if (!person.gender) {
+    throw new Error(`Fuer ${person.name} fehlt das Geschlecht.`);
+  }
+
+  return question[person.gender];
+}
+
 function assignNames(templates, names) {
   if (!Array.isArray(names) || names.length === 0) {
     throw new Error("Die Namensliste ist leer.");
   }
 
-  const shuffledNames = shuffle(names);
+  const normalizedPeople = names.map(normalizePerson);
+  const shuffledNames = shuffle(normalizedPeople);
 
   return templates.map((template, index) => {
-    const name = shuffledNames[index % shuffledNames.length];
-    return template.replaceAll("{{name}}", name);
+    const person = shuffledNames[index % shuffledNames.length];
+    const questionText = getQuestionText(template, person);
+    return questionText.replaceAll("{{name}}", person.name);
   });
 }
 
