@@ -1,108 +1,125 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Birthday Bingo</title>
-  <style>
-    * {
-      box-sizing: border-box;
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Bingo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 2px;
+            background: #EED2EE;
+            color: #1f1a17;
+        }
+
+        main {
+            max-width: 560px;
+            margin: 0 auto;
+            padding: 2px;
+        }
+
+        .toolbar {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 10px;
+            margin-bottom: 16px;
+        }
+
+    .toolbar img {
+      display: block;
+      width: min(100%, 380px);
+      height: auto;
     }
 
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 2px;
-      background: #EED2EE;
-      color: #1f1a17;
-    }
+        .board {
+            display: grid;
+            grid-template-columns: repeat(5, minmax(0, 1fr));
+            gap: 3px;
+            width: 100%;
+        }
 
-    main {
-      max-width: 560px;
-      margin: 0 auto;
-      padding: 2px;
-    }
+        .tile {
+            aspect-ratio: 1 / 1;
+            border: 1px solid #000;
+            border-radius: 6px;
+            background: #fffdf8;
+            color: #000;
+            -webkit-text-fill-color: currentColor;
+            padding: 4px;
+            width: 100%;
+            font-size: clamp(0.54rem, 1.65vw, 0.82rem);
+            line-height: 1.08;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow-wrap: anywhere;
+            word-break: break-word;
+            hyphens: auto;
+            cursor: pointer;
+            appearance: none;
+        }
 
-    .toolbar {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 16px;
-    }
+        .tile.is-checked {
+            background: #DA70D6;
+            text-decoration: line-through;
+        }
 
-    .toolbar h1 {
-      margin: 0;
-      font-size: clamp(1.6rem, 4vw, 1.9rem);
-    }
+        .tile:focus-visible {
+            outline: 2px solid #EEAEEE;
+            outline-offset: 2px;
+        }
 
-    .board {
-      display: grid;
-      grid-template-columns: repeat(5, minmax(0, 1fr));
-      gap: 3px;
-      width: 100%;
-    }
+        .error {
+            margin-top: 12px;
+            font-size: 0.95rem;
+        }
 
-    .tile {
-      aspect-ratio: 1 / 1;
-      border: 1px solid #000;
-      border-radius: 6px;
-      background: #fffdf8;
-      padding: 4px;
-      width: 100%;
-      font-size: clamp(0.54rem, 1.65vw, 0.82rem);
-      line-height: 1.08;
-      text-align: center;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow-wrap: anywhere;
-      word-break: break-word;
-      hyphens: auto;
-      cursor: pointer;
-      appearance: none;
-    }
+        .note {
+            margin: 14px 0 0;
+            font-size: 0.92rem;
+            line-height: 1.35;
+            text-align: center;
+            font-family: "Roboto", Arial, sans-serif;
+        }
 
-    .tile.is-checked {
-      background: #DA70D6;
-      text-decoration: line-through;
-    }
+        @media (max-width: 420px) {
+            body {
+                padding: 4px;
+            }
 
-    .tile:focus-visible {
-      outline: 2px solid #EEAEEE;
-      outline-offset: 2px;
-    }
+            .board {
+                gap: 2px;
+            }
 
-    .error {
-      margin-top: 12px;
-      font-size: 0.95rem;
-    }
-
-    @media (max-width: 420px) {
-      body {
-        padding: 4px;
-      }
-
-      .board {
-        gap: 2px;
-      }
-
-      .tile {
-        padding: 3px;
-        font-size: clamp(0.48rem, 2.2vw, 0.68rem);
-      }
-    }
-  </style>
+            .tile {
+                padding: 3px;
+                font-size: clamp(0.48rem, 2.2vw, 0.68rem);
+            }
+        }
+    </style>
 </head>
 <body>
-  <main>
+<main>
     <div class="toolbar">
-      <h1>Birthday Bingo</h1>
+        <img src="./img.png" alt="Birthday Bingo">
     </div>
 
     <div id="board" class="board" aria-live="polite"></div>
+    <p class="note">Bingo waagerecht/senkrecht: Mini-Surprise</p>
+    <p class="note" style="margin: 0">Alle Felder gefüllt: Hauptpreis (nur für die/den Erste/Ersten)</p>
     <p id="error" class="error" hidden></p>
-  </main>
+</main>
 
-  <script src="app.js"></script>
+<script src="app.js"></script>
 </body>
 </html>
