@@ -1,17 +1,14 @@
 [
   { "name": "Selina", "gender": "w" },
   { "name": "Alex", "gender": "m" },
-  { "name": "Annabell", "gender": "w" },
   { "name": "Anni", "gender": "w" },
   { "name": "Benni", "gender": "m" },
-  { "name": "Chris", "gender": "m" },
   { "name": "Clara", "gender": "w" },
   { "name": "Conrad", "gender": "m" },
   { "name": "Erik", "gender": "m" },
   { "name": "Fiona", "gender": "w" },
   { "name": "Chris", "gender": "m" },
   { "name": "Sebastian", "gender": "m" },
-  { "name": "Johanna", "gender": "w" },
   { "name": "Laura", "gender": "w" },
   { "name": "Jessy", "gender": "w" },
   { "name": "Maike", "gender": "w" },
@@ -21,5 +18,7 @@
   { "name": "Tom Info", "gender": "m" },
   { "name": "Tom two", "gender": "m" },
   { "name": "Maja", "gender": "w" },
-  { "name": "Johannes", "gender": "m" }
+  { "name": "Johannes", "gender": "m" },
+  { "name": "Cedric", "gender": "m" },
+  { "name": "Albert", "gender": "m" }
 ]
