@@ -1,12 +1,5 @@
 [
-  { "m": "Frage {{name}} nach seinem Lieblingseis.", "w": "Frage {{name}} nach ihrem Lieblingseis." },
-  { "m": "Frage {{name}} nach seinem letzten Urlaubsziel.", "w": "Frage {{name}} nach ihrem letzten Urlaubsziel." },
-  { "m": "Frage {{name}} nach seinem Bodycount.", "w": "Frage {{name}} nach ihrem Bodycount." },
-  { "m": "Frage {{name}} nach seinem letzten mit Herz markierten Foto.", "w": "Frage {{name}} nach ihrem letzten mit Herz markierten Foto." },
-  { "m": "Frage {{name}} nach seiner Lieblingseigenschaft an Selina.", "w": "Frage {{name}} nach ihrer Lieblingseigenschaft an Selina." },
-  { "m": "Frage {{name}} nach seinem Lieblingsbuch.", "w": "Frage {{name}} nach ihrem Lieblingsbuch." },
-  { "m": "Frage {{name}} nach seinem Lieblingsspaßgetränk.", "w": "Frage {{name}} nach ihrem Lieblingsspaßgetränk." },
-  { "m": "Frage {{name}}, mit welchen 3 Anwesenden er gern in den Urlaub fahren würde.", "w": "Frage {{name}}, mit welchen 3 Anwesenden sie gern in den Urlaub fahren würde." },
+  { "m": "Frage {{name}} nach seiner Lieblingseigenschaft an Maja.", "w": "Frage {{name}} nach ihrer Lieblingseigenschaft an Maja." },
   { "m": "Tausche Getränke mit {{name}}.", "w": "Tausche Getränke mit {{name}}." },
   { "m": "Mache ein Foto mit {{name}}.", "w": "Mache ein Foto mit {{name}}." },
   { "m": "Stoße an mit {{name}}.", "w": "Stoße an mit {{name}}." },
@@ -22,6 +15,13 @@
   { "m": "Lasse dir von {{name}} ein Getränk mischen.", "w": "Lasse dir von {{name}} ein Getränk mischen." },
   { "m": "Mache ein Foto von {{name}} und den Personen, mit denen er gerade quatscht.", "w": "Mache ein Foto von {{name}} und den Personen, mit denen sie gerade quatscht." },
   { "m": "Finde 5 Leute für ein Gruppenfoto.", "w": "Finde 5 Leute für ein Gruppenfoto." },
-  { "m": "Spiele eine Runde Mario Kart gegen {{name}}.", "w": "Spiele eine Runde Mario Kart gegen {{name}}." },
-  { "m": "Bringe {{name}} dazu, ein Bild für den Kühlschrank zu malen. Du entscheidest das Motiv.", "w": "Bringe {{name}} dazu, ein Bild für den Kühlschrank zu malen. Du entscheidest das Motiv." }
+  { "m": "Fordere {{name}} zum Armdrücken heraus.", "w": "Fordere {{name}} zum Armdrücken heraus." },
+  { "m": "Lasse {{name}} einen Gegenstand holen, den du für die nächste halbe Stunde nicht ablegen darfst. {{name}} kontrolliert.", "w": "Lasse {{name}} einen Gegenstand holen, den du für die nächste halbe Stunde nicht ablegen darfst. {{name}} kontrolliert." },
+  { "m": "Mache ein Selfie mit {{name}}s Handy.", "w": "Mache ein Selfie mit {{name}}s Handy." },
+  { "m": "Nimm ein Video von {{name}} auf, in dem er Maja zum Geburtstag gratuliert.", "w": "Nimm ein Video von {{name}} auf, in dem sie Maja zum Geburtstag gratuliert." },
+  { "m": "Bringe {{name}} einen Snack.", "w": "Bringe {{name}} einen Snack." },
+  { "m": "Bringe {{name}} dazu, ein Bild für Majas Kühlschrank zu malen. Du entscheidest das Motiv.", "w": "Bringe {{name}} dazu, ein Bild für Majas Kühlschrank zu malen. Du entscheidest das Motiv." },
+  { "m": "Spiele eine Runde Rage Cage.", "w": "Spiele eine Runde Rage Cage." },
+  { "m": "Stelle {{name}} eine 'Würdest du lieber...?' Frage.", "w": "Stelle {{name}} eine 'Würdest du lieber...?'-Frage." },
+  {"m":  "Frage {{name}} nach seiner größten Red Flag.", "w": "Frage {{name}} nach ihrer größten Red Flag."}
 ]
